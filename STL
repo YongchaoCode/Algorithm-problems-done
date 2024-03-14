@@ -248,3 +248,41 @@ int main()
     for_each(v2.begin(),itt,print);
     return 0;
 }*/
+
+
+//题目：在n篇文章中，查找一个单词是否在一个文章中出现过，出现输出对应的文章
+//用了unordered_map<string,vector<int> >容器
+#include<bits/stdc++.h>
+#include<unordered_map>
+#include<vector>
+using namespace std;
+unordered_map<string,vector<int> > mp;
+const int N=1e4+9;
+int cnt[N];//排重作用
+int main()
+{
+    int n,m;
+     string s;
+     cin>>n;
+      for(int i=1;i<=n;i++){//文章的篇数
+           cin>>m;
+            for(int j=1;j<=m;j++){
+                cin>>s;
+                 mp[s].push_back(i);//i:文章的篇数,单词充当键值
+            }
+      }
+
+      cin>>n;//开始查询
+       for(int i=1;i<=n;i++){
+           memset(cnt,0,sizeof(cnt));
+           cin>>s;
+            for(int j=0;j<mp[s].size();j++){//mp[s].size()返回的是实值，s种类的单词存在的文章数量，但是有重复的
+                if(cnt[mp[s][j]]==0){//cnt[i]:代表第i篇文章是否被访问过，0代表没有被访问，则被访问过
+                    cout<<mp[s][j]<<" ";
+                    cnt[mp[s][j]]=1;
+                }
+            }
+            cout<<endl;
+       }
+    return 0;
+}
