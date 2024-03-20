@@ -1,9 +1,9 @@
-//½øÖÆ¹şÏ£
+//è¿›åˆ¶å“ˆå¸Œ
 /*#include<bits/stdc++.h>
 using namespace std;
 typedef unsigned long long ull;
 const int N=1e4+9;
-ull a[N];//´æÃ¿Ò»ÖÖ×Ö·û´®µÄhashÖµ
+ull a[N];//å­˜æ¯ä¸€ç§å­—ç¬¦ä¸²çš„hashå€¼
 
 ull getHash(string &s){
     ull P=131,H=0;
