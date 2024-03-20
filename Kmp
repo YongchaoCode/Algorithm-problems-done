@@ -1,4 +1,4 @@
-//KMPËã·¨£º
+//KMPç®—æ³•ï¼š
 /*
 #include<bits/stdc++.h>
 using namespace std;
@@ -6,9 +6,9 @@ const int N = 1e6 + 9;
 int Next[N]={0};
 
 //next[]:
-void getNext(string &s) {//1:NextÊı×é£ºÇóÇ°i¸ö×Ö´®ÓµÓĞµÄ×î³¤Ç°×º==ºó×ºµÄ³¤¶È.Ç°×º==ºó×º¶¼ÊÇ×óµ½ÓÒµÄË³Ğò
+void getNext(string &s) {//1:Nextæ•°ç»„ï¼šæ±‚å‰iä¸ªå­—ä¸²æ‹¥æœ‰çš„æœ€é•¿å‰ç¼€==åç¼€çš„é•¿åº¦.å‰ç¼€==åç¼€éƒ½æ˜¯å·¦åˆ°å³çš„é¡ºåº
     int j = 0;           //eg: abcba :0 0 0 0 1
-    for (int i = 1; i < s.size(); i++) {//2:j£ºÇ°×ºµÄÄ©Î²Î»ÖÃ£¬ºÍÇ°×º==ºó×ºµÄ×î´ó³¤¶È¡£i:ºó×ºµÄÄ©Î²Î»ÖÃ
+    for (int i = 1; i < s.size(); i++) {//2:jï¼šå‰ç¼€çš„æœ«å°¾ä½ç½®ï¼Œå’Œå‰ç¼€==åç¼€çš„æœ€å¤§é•¿åº¦ã€‚i:åç¼€çš„æœ«å°¾ä½ç½®
         while (j > 0 && s[j] != s[i]) {
             j--;
         }
@@ -24,7 +24,7 @@ int main() {
     cin >> s1 >> s2;
     getNext(s2);
 
-    int j = 0;//jÊÇÄ£Ê½´®µÄË÷Òı
+    int j = 0;//jæ˜¯æ¨¡å¼ä¸²çš„ç´¢å¼•
     for (int i = 0; i < s1.size(); i++) {
         if(s2.size()==0){
             cout<<0<<endl;
@@ -38,18 +38,18 @@ int main() {
             j++;
         }
         if (j == s2.size()) {
-            cout << i - s2.size() + 2 << endl;//+1ÏÂ±êÊÇ´Ó0¿ªÊ¼
+            cout << i - s2.size() + 2 << endl;//+1ä¸‹æ ‡æ˜¯ä»0å¼€å§‹
         }
     }
     return 0;
 }*/
 
-//kmp£¨Âå¹È Barn Echoes G£©:Á÷³Ì£º
-//¿¼ÑékmpµÄÁ÷³Ì£º
+//kmpï¼ˆæ´›è°· Barn Echoes Gï¼‰:æµç¨‹ï¼š
+//è€ƒéªŒkmpçš„æµç¨‹ï¼š
 //s1: a b d e e g
 //s2: e g e d i c
-//ÎªÊ²Ã´ÄÜÊä³ö2£¨×î³¤s1µÄºó×º==s2µÄÇ°×º£¨2:e g£©,kmp forÑ­»·ºóµÄj¾ÍÊÇ¸Ã³¤¶È£©
-//²»¶®ÁËÔÙµ÷ÊÔÒ»±ßforÑ­»·¿´¿´¾Í¶®ÁË
+//ä¸ºä»€ä¹ˆèƒ½è¾“å‡º2ï¼ˆæœ€é•¿s1çš„åç¼€==s2çš„å‰ç¼€ï¼ˆ2:e gï¼‰,kmp forå¾ªç¯åçš„jå°±æ˜¯è¯¥é•¿åº¦ï¼‰
+//ä¸æ‡‚äº†å†è°ƒè¯•ä¸€è¾¹forå¾ªç¯çœ‹çœ‹å°±æ‡‚äº†
 /*#include<bits/stdc++.h>
 using namespace std;
 const int N=89;
@@ -129,10 +129,10 @@ int main()
         memset(a,0,sizeof(Next));
         int flag=1;
         cin>>n1>>n2;
-        for(int i=0;i<n1;i++){cin>>a[i];}//a:ÎÄ±¾´®
-        for(int i=0;i<n2;i++){cin>>b[i];}//b:Ä£Ê½´®
+        for(int i=0;i<n1;i++){cin>>a[i];}//a:æ–‡æœ¬ä¸²
+        for(int i=0;i<n2;i++){cin>>b[i];}//b:æ¨¡å¼ä¸²
 
-        //kmpËã·¨
+        //kmpç®—æ³•
         getNext();
         int j=0;
         for(int i=0;i<n1;i++){
@@ -190,7 +190,7 @@ int main()
         memset(Next,0,sizeof(Next));
 
         string s1,s2;
-        cin>>s2>>s1;//s1:Ä£Ê½´®
+        cin>>s2>>s1;//s1:æ¨¡å¼ä¸²
         getNext(s1);
         //kmp
         int j=0;
