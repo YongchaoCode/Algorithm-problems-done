@@ -41,3 +41,58 @@ int main() {
 }*/
 
 
+//改进的manacher，上一个不知道为什么总是RE，TLE
+#include<bits/stdc++.h>
+using namespace std;
+const int N=21000009;
+char a[N];
+char s[N];
+int d[N];
+
+int get_new(){
+    int len=strlen(a);
+     s[0]='$';
+     s[1]='#';
+     int k=1;
+      for(int i=0;i<len;i++){
+          s[++k]=a[i],s[++k]='#';
+      }
+    s[++k]='\0';//130行，为满足循环次数，走完s串。不使用strlen,优化
+      return k;
+}
+
+int manacher(){
+   int id=1,mx=1,Max=0,len=get_new();
+    for(int i=1;i<len;i++){
+        if(i<mx){
+            d[i]=min(d[2*id-i],mx-i);
+        }
+        else{
+            d[i]=1;
+        }
+         while(s[i+d[i]]==s[i-d[i]]){
+             d[i]++;
+         }
+          if(i+d[i]>mx){
+              mx=i+d[i];
+              id=i;//当i是边界，能把边界mx拉得更远，那么就是以i为中心的id的回文串，
+                     // 在后面中，也是在以i为中心的回文串的，使用到p[]盒子
+          }
+          Max=max(Max,d[i]);
+    }
+    return Max-1;
+}
+
+int main()
+{
+    int n;
+     cin>>n;
+      while(n--){
+          memset(a,0,sizeof(a));
+          cin>>a;
+          cout<<manacher()<<endl;
+      }
+    return 0;
+}
+
+
