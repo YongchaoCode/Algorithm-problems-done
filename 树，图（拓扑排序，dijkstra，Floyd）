@@ -1,41 +1,41 @@
-                 /* **                      Ê÷                 *** */
-////Ê÷£º
+                 /* **                      æ ‘                 *** */
+////æ ‘ï¼š
 ///*
-// ´æ´¢·½Ê½£º
-//    1£ºË«Ç×±íÊ¾·¨£¨¸Ã½ÚµãÖªµÀ×Ô¼º£¬²¢ÖªµÀ¸¸½áµãµÄÎ»ÖÃ¡£µ«ÊÇ²»ÖªµÀ×Ô¼º½áµãµÄ×Ó½Úµã£¨Òª¸Ä½ø£©£©
-//    2£ºº¢×Ó±íÊ¾·¨£¨Êı×é+Á´±íµÄ´æ´¢·½Ê½£¬PPTÊ÷£¨p10£©£©
+// å­˜å‚¨æ–¹å¼ï¼š
+//    1ï¼šåŒäº²è¡¨ç¤ºæ³•ï¼ˆè¯¥èŠ‚ç‚¹çŸ¥é“è‡ªå·±ï¼Œå¹¶çŸ¥é“çˆ¶ç»“ç‚¹çš„ä½ç½®ã€‚ä½†æ˜¯ä¸çŸ¥é“è‡ªå·±ç»“ç‚¹çš„å­èŠ‚ç‚¹ï¼ˆè¦æ”¹è¿›ï¼‰ï¼‰
+//    2ï¼šå­©å­è¡¨ç¤ºæ³•ï¼ˆæ•°ç»„+é“¾è¡¨çš„å­˜å‚¨æ–¹å¼ï¼ŒPPTæ ‘ï¼ˆp10ï¼‰ï¼‰
 //*/
-////2£ºº¢×Ó±íÊ¾·¨´úÂë£º
+////2ï¼šå­©å­è¡¨ç¤ºæ³•ä»£ç ï¼š
 //
-////º¢×Ó½áµãµÄÁ´±í:
+////å­©å­ç»“ç‚¹çš„é“¾è¡¨:
 //typedef struct CNod{
-//    int pos;//¸Ã×Ó½ÚµãµÄÏÂ±ê
-//    struct CNod* next;//Ö¸ÏòÏÂÒ»¸ö×Ó½áµã
+//    int pos;//è¯¥å­èŠ‚ç‚¹çš„ä¸‹æ ‡
+//    struct CNod* next;//æŒ‡å‘ä¸‹ä¸€ä¸ªå­ç»“ç‚¹
 //}*ChildNod;
 //
-////±íÍ·½á¹¹£º
+////è¡¨å¤´ç»“æ„ï¼š
 //typedef struct {
-//    char data;//½áµãÊı¾İÓò
-//    int parent;//½áµãµÄ¸¸½áµãµÄÏÂ±ê
-//    ChildNod child;//½áµãµÄµÚÒ»¸öº¢×Ó  £¿£¿£¿Ö¸Õë
+//    char data;//ç»“ç‚¹æ•°æ®åŸŸ
+//    int parent;//ç»“ç‚¹çš„çˆ¶ç»“ç‚¹çš„ä¸‹æ ‡
+//    ChildNod child;//ç»“ç‚¹çš„ç¬¬ä¸€ä¸ªå­©å­  ï¼Ÿï¼Ÿï¼ŸæŒ‡é’ˆ
 //}ThNod;
 //
-////Ê÷½á¹¹
+////æ ‘ç»“æ„
 //typedef struct {
-//    ThNod nods[100];//Ê÷µÄ½áµã
-//    int r,n;//r:½áµãµÄÎ»ÖÃ£¬n:½áµãµÄÊıÁ¿
+//    ThNod nods[100];//æ ‘çš„ç»“ç‚¹
+//    int r,n;//r:ç»“ç‚¹çš„ä½ç½®ï¼Œn:ç»“ç‚¹çš„æ•°é‡
 //};
 
 
-                            /*           Í¼            */
-//Í¼£º
-/*1£º´æ´¢·½·¨£ºÁÚ½Ó¾ØÕó£¬ÁÚ½Ó±í£¬Ê®×ÖÁ´±í
+                            /*           å›¾            */
+//å›¾ï¼š
+/*1ï¼šå­˜å‚¨æ–¹æ³•ï¼šé‚»æ¥çŸ©é˜µï¼Œé‚»æ¥è¡¨ï¼Œåå­—é“¾è¡¨
  *
  *
  *
 */
 
-//ÁÚ½Ó±í´æ´¢:https://zhuanlan.zhihu.com/p/618361957
+//é‚»æ¥è¡¨å­˜å‚¨:https://zhuanlan.zhihu.com/p/618361957
 /*#include<bits/stdc++.h>
 using namespace std;
 int main()
@@ -44,7 +44,7 @@ int main()
      int tot=0;
      int n,m;
      cin>>n>>m;
-      for(int i=1;i<=m;i++){//¼¸¸öÊı×éÏëÁË4,5Ìì£¬ºÜÈÆ¡£
+      for(int i=1;i<=m;i++){//å‡ ä¸ªæ•°ç»„æƒ³äº†4,5å¤©ï¼Œå¾ˆç»•ã€‚
           int x,y,z;
            cin>>x>>y>>z;
            ver[++tot]=y;
@@ -55,16 +55,16 @@ int main()
 
         int a;
           cin>>a;
-       //±éÀúa¶¥µãµÄËùÓĞ³ö±ß
+       //éå†aé¡¶ç‚¹çš„æ‰€æœ‰å‡ºè¾¹
         for(int i=head[a];i;i=nxt[i]){
-            int j=ver[i],w=edge[i];//jÖÕµã£¬wÈ¨
+            int j=ver[i],w=edge[i];//jç»ˆç‚¹ï¼Œwæƒ
              cout<<j<<" "<<w<<endl;
         }
     return 0;
 }*/
 
 
-//1:Í¼µÄ´æ´¢£¨Âå¹È£©£º£¨ÁÚ½Ó¾ØÕó+ÁÚ½Ó±íÊµÏÖ£©
+//1:å›¾çš„å­˜å‚¨ï¼ˆæ´›è°·ï¼‰ï¼šï¼ˆé‚»æ¥çŸ©é˜µ+é‚»æ¥è¡¨å®ç°ï¼‰
 /*
 #include<bits/stdc++.h>
 using namespace std;
@@ -102,7 +102,7 @@ int main()
 }*/
 
 
-//2:Í¼µÄ±éÀú£¨Âå¹È£©ÁÚ½Ó±í+dfs±éÀú £¬¼¼ÇÉ£º·´ÏòÁÚ½Ó±í
+//2:å›¾çš„éå†ï¼ˆæ´›è°·ï¼‰é‚»æ¥è¡¨+dfséå† ï¼ŒæŠ€å·§ï¼šåå‘é‚»æ¥è¡¨
 /*
 #include<bits/stdc++.h>
 #include<vector>
@@ -110,7 +110,7 @@ using namespace std;
 const int N=1e5+9;
 
 vector<int>G[N];
-int vis[N];//×÷ÓÃ£º±ê¼Ç·ÃÎÊ+´æ´¢ i¶¥µãÄÜµ½´ï×î´óµÄ±àºÅ¶¥µã
+int vis[N];//ä½œç”¨ï¼šæ ‡è®°è®¿é—®+å­˜å‚¨ ié¡¶ç‚¹èƒ½åˆ°è¾¾æœ€å¤§çš„ç¼–å·é¡¶ç‚¹
 
 void dfs(int x,int d){
     if(vis[x]){
@@ -142,23 +142,23 @@ int main()
 }*/
 
 
-//3:ÍØÆËÅÅĞò/¼ÒÆ×Ê÷
+//3:æ‹“æ‰‘æ’åº/å®¶è°±æ ‘
 /*#include<bits/stdc++.h>
 #include<vector>
 #include<queue>
 using namespace std;
 const int N=1000009;
 
-vector<int> G[N];//ÁÚ½Ó¾ØÕó
+vector<int> G[N];//é‚»æ¥çŸ©é˜µ
 queue<int> q;
-int R[N];//¶¥µãµÄÈë¶ÈÊı
+int R[N];//é¡¶ç‚¹çš„å…¥åº¦æ•°
 
 void solve(){
      while(!q.empty()){
          int t=q.front();
           q.pop();
           cout<<t<<" ";
-          //±éÀú¸Ã¶¥µãµÄºó´ú£¬G[t]
+          //éå†è¯¥é¡¶ç‚¹çš„åä»£ï¼ŒG[t]
           for(auto x:G[t]){
               R[x]--;
               if(R[x]==0){
@@ -182,7 +182,7 @@ int main()
 
        for(int i=1;i<=n;i++){
            if(R[i]==0){
-               q.push(i);//Èë¶È==0µÄ¶¥µãÈë¶Ó
+               q.push(i);//å…¥åº¦==0çš„é¡¶ç‚¹å…¥é˜Ÿ
            }
        }
        solve();
@@ -192,7 +192,7 @@ int main()
 
 
 //4:Count Connected Components
-//dfs±éÀú
+//dfséå†
 /*#include<bits/stdc++.h>
 #include<vector>
 using namespace std;
@@ -234,8 +234,8 @@ int main()
 }*/
 
 
-//5:²éÕÒÎÄÏ×£¨Âå¹È£©
-//Í¼µÄ±éÀú£ºdfs£¬bfs£¬£¨ÓÅÏÈÊä³öĞ¡µÄÔªËØ£¬ÅÅĞò(setÈİÆ÷½â¾ö)£©
+//5:æŸ¥æ‰¾æ–‡çŒ®ï¼ˆæ´›è°·ï¼‰
+//å›¾çš„éå†ï¼šdfsï¼Œbfsï¼Œï¼ˆä¼˜å…ˆè¾“å‡ºå°çš„å…ƒç´ ï¼Œæ’åº(setå®¹å™¨è§£å†³)ï¼‰
 /*#include<bits/stdc++.h>
 #include<set>
 #include<queue>
@@ -357,10 +357,10 @@ int main()
 
 
 
-//dijkstraËã·¨(Í¼ÖĞÆğµãµ½ÖÕµãµÄ×î¶ÌÂ·¾¶):
+//dijkstraç®—æ³•(å›¾ä¸­èµ·ç‚¹åˆ°ç»ˆç‚¹çš„æœ€çŸ­è·¯å¾„):
 /*#include<bits/stdc++.h>
 using namespace std;
-vector<pair<int,int>> v[100];//´æÍ¼£º firstÎªÖµ???£¬secondÎªµã
+vector<pair<int,int>> v[100];//å­˜å›¾ï¼š firstä¸ºå€¼???ï¼Œsecondä¸ºç‚¹
 vector<int>vis(100,0),dis(100,INT_MAX);
 
 void dijkstra(){
@@ -369,7 +369,7 @@ void dijkstra(){
       q.push({0,1});
          dis[1]=0;
        while(!q.empty()){
-           int u=q.top().second;//µ±Ç°Í¼ÖĞ¾àÀëÆğµã×îĞ¡¾àÀëµÄµã
+           int u=q.top().second;//å½“å‰å›¾ä¸­è·ç¦»èµ·ç‚¹æœ€å°è·ç¦»çš„ç‚¹
             q.pop();
             if(vis[u]){
                 continue;
@@ -402,20 +402,20 @@ int main()
 
 
 
-//7:Dijkstra(Êä³öÍ¨¹ıµÄÂ·¾¶)
+//7:Dijkstra(è¾“å‡ºé€šè¿‡çš„è·¯å¾„)
 /*#include<bits/stdc++.h>
 using namespace std;
 const int N=2e5+9;
 typedef long long ll;
 const ll INF = 0x3f3f3f3f3f3f3f3f;//???
-ll d[N];//¼ÇÂ¼Â·¾¶
+ll d[N];//è®°å½•è·¯å¾„
 ll R[N];
 vector<pair<ll,ll>>G[N];
 vector<ll>vis(N,0),dis(N,INF);
 priority_queue<pair<ll,ll>>q;
 
 void dijkstra(){
-    q.push({0,1});//first¾àÀë£¬second½áµã
+    q.push({0,1});//firstè·ç¦»ï¼Œsecondç»“ç‚¹
       dis[1]=0;
       while(!q.empty()){
           int t=q.top().second;
@@ -468,11 +468,11 @@ int main()
 
 
 //8: Ordering Tasks
-//ÍØÆËÅÅĞò
+//æ‹“æ‰‘æ’åº
 /*#include<bits/stdc++.h>
 using namespace std;
 const int N=10009;
-int R[N];//¸÷¶¥µãµÄÈë¶È
+int R[N];//å„é¡¶ç‚¹çš„å…¥åº¦
 queue<int>q;
 vector<int>G[N];
 
@@ -516,13 +516,13 @@ int main()
 
 
 //Dijkstra:
-//ÎŞÏòÍ¼
+//æ— å‘å›¾
 //9:
 /*#include<bits/stdc++.h>
 using namespace std;
 const int N=20009;
 
-vector<pair<int,int>>G[N];//firstÖµ£¬second½áµã
+vector<pair<int,int>>G[N];//firstå€¼ï¼Œsecondç»“ç‚¹
 vector<int>vis(N,0),dis(N,INT_MAX);
 priority_queue<pair<int,int>>q;
 
@@ -569,7 +569,7 @@ int main()
 
 
 
-//10£ºFloydËã·¨£¨Âå¹È£¬°å×ÓÌâ£©£º
+//10ï¼šFloydç®—æ³•ï¼ˆæ´›è°·ï¼Œæ¿å­é¢˜ï¼‰ï¼š
 /*#include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;
@@ -579,7 +579,7 @@ ll G[N][N];
 int n,m;
 
 void floyd(){
-    for(int k=1;k<=n;k++){//k:ÖĞ×ªÕ¾
+    for(int k=1;k<=n;k++){//k:ä¸­è½¬ç«™
        for(int i=1;i<=n;i++){
            for(int j=1;j<=n;j++){
                if(G[i][j]>G[i][k]+G[k][j]){
@@ -625,13 +625,13 @@ int main()
     return 0;
 }*/
 
-//11: µ¥Ô´×î¶ÌÂ·¾¶£¨Èõ»¯°æ£©(Âå¹È)
+//11: å•æºæœ€çŸ­è·¯å¾„ï¼ˆå¼±åŒ–ç‰ˆï¼‰(æ´›è°·)
 /*#include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;
 const int N=2e5+9;
 
-vector<pair<int,int>>G[N];//firstÖµ
+vector<pair<int,int>>G[N];//firstå€¼
 vector<int>vis(N,0),dis(N,INT_MAX);
 priority_queue<pair<int,int>>q;
 int n,m,s;
@@ -658,7 +658,7 @@ void dij(){
 int main()
 {
 
-      cin>>n>>m>>s;//sÎªÆğµã
+      cin>>n>>m>>s;//sä¸ºèµ·ç‚¹
        for(int i=1;i<=m;i++){
            int u,v,w;
             cin>>u>>v>>w;
@@ -673,7 +673,7 @@ int main()
 }*/
 
 
-//12:×î¶ÌÂ·¼ÆÊı:dijÔÙdfs£¿(Âå¹È)
+//12:æœ€çŸ­è·¯è®¡æ•°:dijå†dfsï¼Ÿ(æ´›è°·)
 /*#include<bits/stdc++.h>
 using namespace std;
 const int N=1e6+9;
@@ -702,13 +702,13 @@ void dij(){
         }
 }
 
-void dfs(int x,int end){//µ±Ç°µã£¬ÖÕµã
+void dfs(int x,int end){//å½“å‰ç‚¹ï¼Œç»ˆç‚¹
     if(vis[x]){
         return;
     }
     vis[x]=1;
 
-     if(x==end && ){//&&×ßµÄÂ·¾¶==×î¶ÌÂ·¾¶
+     if(x==end && ){//&&èµ°çš„è·¯å¾„==æœ€çŸ­è·¯å¾„
 
      }
 
@@ -732,24 +732,24 @@ int main()
         cout<<1<<" ";
        for(int i=2;i<=n;i++){
            fill(vis.begin(),vis.end(),0);
-            dfs(1,n);//Æğµã£¬ÖÕµã
+            dfs(1,n);//èµ·ç‚¹ï¼Œç»ˆç‚¹
        }
     return 0;
 }*/
 
 
 
-//13:Ñ°ÕÒµÀÂ·£º£¨Âå¹È£©:·´ÏòËÑË÷£¨£¡£¡£¡£©
-//·´Ïò½¨Í¼£¬orZ
+//13:å¯»æ‰¾é“è·¯ï¼šï¼ˆæ´›è°·ï¼‰:åå‘æœç´¢ï¼ˆï¼ï¼ï¼ï¼‰
+//åå‘å»ºå›¾ï¼ŒorZ
 /*#include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;
 const int N=2e5+9;
 
 int vis[N];
-int can[N];//±ê¼ÇÄÜµ½´ïÖÕµãµÄµã
-int ri[N];//±ê¼ÇºÏ¹æµã
-int dis[N];//¼ÇÂ¼ºÏ¹æµãµÄ×î¶ÌÂ·¾¶,²¢Æğµ½vis×÷ÓÃ
+int can[N];//æ ‡è®°èƒ½åˆ°è¾¾ç»ˆç‚¹çš„ç‚¹
+int ri[N];//æ ‡è®°åˆè§„ç‚¹
+int dis[N];//è®°å½•åˆè§„ç‚¹çš„æœ€çŸ­è·¯å¾„,å¹¶èµ·åˆ°visä½œç”¨
 vector<int>zG[N],fG[N];
 queue<int>q;
 
@@ -759,22 +759,22 @@ int main()
      cin>>n>>m;
       for(int i=1;i<=m;i++){
           int a,b;
-           cin>>a>>b;//ÓĞÏòÍ¼
+           cin>>a>>b;//æœ‰å‘å›¾
             zG[a].push_back(b);
-            fG[b].push_back(a);//·´Ïò½¨Í¼
+            fG[b].push_back(a);//åå‘å»ºå›¾
       }
       cin>>s>>t;
-      //·´Ïòbfs£¬ÕÒ³öÄÜµ½´ïÖÕµãµÄµã
+      //åå‘bfsï¼Œæ‰¾å‡ºèƒ½åˆ°è¾¾ç»ˆç‚¹çš„ç‚¹
          q.push(t);
           can[t]=1;
         while(!q.empty()){
             int temp=q.front();
              q.pop();
               for(int i=fG[temp].size()-1;i>=0;i--){
-                  int to=fG[temp][i];//to:tempµã µÄÓĞÏòµã
+                  int to=fG[temp][i];//to:tempç‚¹ çš„æœ‰å‘ç‚¹
                    if(!can[to]){
                        q.push(to);
-                       can[to]=1;//±ê¼Ç£ºÄÜµ½´ïÖÕµã
+                       can[to]=1;//æ ‡è®°ï¼šèƒ½åˆ°è¾¾ç»ˆç‚¹
                    }
               }
         }
@@ -783,7 +783,7 @@ int main()
               return 0;
          }
 
-        //±éÀúÄÜµ½´ïÖÕµãµÄ¶¥µã£¬Èô¸ÃµãÓĞ²»ÄÜµ½´ïÖÕµãµÄµã£¬ÔòÉ¾³ı¸Ã¶¥µã
+        //éå†èƒ½åˆ°è¾¾ç»ˆç‚¹çš„é¡¶ç‚¹ï¼Œè‹¥è¯¥ç‚¹æœ‰ä¸èƒ½åˆ°è¾¾ç»ˆç‚¹çš„ç‚¹ï¼Œåˆ™åˆ é™¤è¯¥é¡¶ç‚¹
            for(int i=1;i<=n;i++){
                if(can[i]){
                     ri[i]=1;
@@ -797,19 +797,19 @@ int main()
                }
            }
 
-    if(!ri[s])			            //ÕâÀïĞèÒªÌØÊâÅĞ¶¨Ò»ÏÂÆğµãÊÇ·ñÂú×ãÌõ¼ş
+    if(!ri[s])			            //è¿™é‡Œéœ€è¦ç‰¹æ®Šåˆ¤å®šä¸€ä¸‹èµ·ç‚¹æ˜¯å¦æ»¡è¶³æ¡ä»¶
     {
         cout<<"-1";
         return 0;
     }
-       //ÕıÏòbfs£¬±éÀúºÏ¹æµã£¬Çó×î¶ÌÂ·¾¶
+       //æ­£å‘bfsï¼Œéå†åˆè§„ç‚¹ï¼Œæ±‚æœ€çŸ­è·¯å¾„
         dis[s]=1;
         q.push(s);
          while(!q.empty()){
              int temp=q.front();
               q.pop();
                if(temp==t){
-                   cout<<dis[temp]-1<<endl;//ÒòÎªÆğµãdis[]+1ÁËµÄ
+                   cout<<dis[temp]-1<<endl;//å› ä¸ºèµ·ç‚¹dis[]+1äº†çš„
                     return 0;
                }
               for(int i=zG[temp].size()-1;i>=0;i--){
@@ -827,14 +827,14 @@ int main()
 
 
 
-//14:×î¶ÌÂ·¼ÆÊı£¨Âå¹È£©£¨ÁÚ½Ó±í´æ´¢+×î¶ÌÂ·µÄÌõÊı£©
+//14:æœ€çŸ­è·¯è®¡æ•°ï¼ˆæ´›è°·ï¼‰ï¼ˆé‚»æ¥è¡¨å­˜å‚¨+æœ€çŸ­è·¯çš„æ¡æ•°ï¼‰
 /*#include<bits/stdc++.h>
 using namespace std;
 const int N=2e6+9;
 const int Mod=100003;
-int ans[N];//¼ÇÂ¼Â·¾¶Êı
+int ans[N];//è®°å½•è·¯å¾„æ•°
 
-vector<pair<int,int>>G[N];//first:Öµ
+vector<pair<int,int>>G[N];//first:å€¼
 vector<int>dis(N,INT_MAX),vis(N,0);
 priority_queue<pair<int,int>>q;
 
@@ -882,3 +882,4 @@ int main()
     return 0;
 }*/
 
+//2024.4.7ä¸Šä¼ 
