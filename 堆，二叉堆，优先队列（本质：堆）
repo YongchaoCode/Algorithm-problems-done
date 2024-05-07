@@ -1,6 +1,6 @@
-//¶Ñ£¬¶ş²æ¶Ñ£¬ÓÅÏÈ¶ÓÁĞ£¨±¾ÖÊ£º¶Ñ£©
+//å †ï¼ŒäºŒå‰å †ï¼Œä¼˜å…ˆé˜Ÿåˆ—ï¼ˆæœ¬è´¨ï¼šå †ï¼‰
 
-//¶Ñ£¨Âå¹È£©
+//å †ï¼ˆæ´›è°·ï¼‰
 /*#include<bits/stdc++.h>
 using namespace std;
 int main()
@@ -26,15 +26,15 @@ int main()
 }*/
 
 
-//¶Ñ£¨Âå¹È£©¶ş²æ¶Ñ£¨Ğ¡¸ù¶Ñ£©
+//å †ï¼ˆæ´›è°·ï¼‰äºŒå‰å †ï¼ˆå°æ ¹å †ï¼‰
 /*#include<bits/stdc++.h>
 using namespace std;
 const int N=1e6+9;
 int heap[N];
-int n,op,s=0;//size:Ê÷µÄ¸ß¶È
+int n,op,s=0;//size:æ ‘çš„é«˜åº¦
 
 void up(int &i,int val){
-   while(i>1 && heap[i/2]>val){//²»Âú×ãĞ¡¸ù¶Ñ
+   while(i>1 && heap[i/2]>val){//ä¸æ»¡è¶³å°æ ¹å †
        heap[i]=heap[i/2];
        i/=2;
    }
@@ -55,7 +55,7 @@ void down(int &i,int val){// !!!
      }
 }
 
-void insert(int val){//²åÈë
+void insert(int val){//æ’å…¥
    int i=++s;
      up(i,val);
      heap[i]=val;
@@ -75,14 +75,14 @@ int main()
      cin>>n;
       while(n--){
           cin>>op;
-           if(op==1){//²åÈë£¬½¨¶Ñ
+           if(op==1){//æ’å…¥ï¼Œå»ºå †
                cin>>x;
                insert(x);
            }
-           else if(op==2){//Êä³ö×îĞ¡Öµ
+           else if(op==2){//è¾“å‡ºæœ€å°å€¼
                cout<<heap[1]<<'\n';
            }
-           else if(op==3){//É¾³ı×îĞ¡Öµ
+           else if(op==3){//åˆ é™¤æœ€å°å€¼
               delete_min();
            }
       }
@@ -90,7 +90,7 @@ int main()
 }*/
 
 
-//ºÏ²¢¹û×Ó£¨Âå¹È£© ÓÅÏÈ¶ÓÁĞ
+//åˆå¹¶æœå­ï¼ˆæ´›è°·ï¼‰ ä¼˜å…ˆé˜Ÿåˆ—
 /*#include<bits/stdc++.h>
 using namespace std;
 int main()
