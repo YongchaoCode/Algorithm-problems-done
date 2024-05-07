@@ -1,7 +1,7 @@
-//Ê÷µÄÖ±¾¶£¨Á½´Îdfs£¬dp£©£¬Ê÷µÄÖØĞÄ£¬×îĞ¡Éú³ÉÊ÷(Âå¹È)£¨KruskalËã·¨£©,²¢²é¼¯
+//æ ‘çš„ç›´å¾„ï¼ˆä¸¤æ¬¡dfsï¼Œdpï¼‰ï¼Œæ ‘çš„é‡å¿ƒï¼Œæœ€å°ç”Ÿæˆæ ‘(æ´›è°·)ï¼ˆKruskalç®—æ³•ï¼‰,å¹¶æŸ¥é›†
 
 
-//Ê÷µÄÖ±¾¶£¨ÓĞÈ¨Â·¾¢£¬dfs£©
+//æ ‘çš„ç›´å¾„ï¼ˆæœ‰æƒè·¯åŠ²ï¼Œdfsï¼‰
 //1:Cow Marathon
 /*#include<bits/stdc++.h>
 using namespace std;
@@ -10,10 +10,10 @@ const int N=1e5;
 int c=0;
 int d[N];
 //vector<int>G[N];
-vector<pair<int,int>>G[N];//first:Öµ£¬
+vector<pair<int,int>>G[N];//first:å€¼ï¼Œ
 
-void dfs(int u,int fu){//u£ºµ±Ç°½áµã£¬fu£ºµ±Ç°½áµãµÄ¸¸½Úµã£¨È·±£ÔÚÉî¶ÈÓÅÏÈËÑË÷ÖĞ²»»áÑØ×Å·´ÏòÂ·¾¶»ØËİ£¬
-    for(auto[x,y]:G[u]){//y:¶¥µã
+void dfs(int u,int fu){//uï¼šå½“å‰ç»“ç‚¹ï¼Œfuï¼šå½“å‰ç»“ç‚¹çš„çˆ¶èŠ‚ç‚¹ï¼ˆç¡®ä¿åœ¨æ·±åº¦ä¼˜å…ˆæœç´¢ä¸­ä¸ä¼šæ²¿ç€åå‘è·¯å¾„å›æº¯ï¼Œ
+    for(auto[x,y]:G[u]){//y:é¡¶ç‚¹
         if(y==fu){
             continue;
         }
@@ -22,7 +22,7 @@ void dfs(int u,int fu){//u£ºµ±Ç°½áµã£¬fu£ºµ±Ç°½áµãµÄ¸¸½Úµã£¨È·±£ÔÚÉî¶ÈÓÅÏÈËÑË÷ÖĞ
             c=y;
         }
         dfs(y,u);
-    }                                                  // ÓĞĞ§·ÀÖ¹ÖØ¸´·ÃÎÊºÍËÀÑ­»·¡£
+    }                                                  // æœ‰æ•ˆé˜²æ­¢é‡å¤è®¿é—®å’Œæ­»å¾ªç¯ã€‚
 }
 
 int main()
@@ -37,14 +37,14 @@ int main()
         G[y].push_back({len,x});
     }
     dfs(1,0);
-    d[c]=0;//ÕâÀï²»ĞèÒª³õÊ¼»¯d[],dfsÖĞd[v]=d[u]+1»á¸²¸ÇÔ­À´µÄ½áµãÖ±¾¶£¨²»¶®»­Í¼£©
+    d[c]=0;//è¿™é‡Œä¸éœ€è¦åˆå§‹åŒ–d[],dfsä¸­d[v]=d[u]+1ä¼šè¦†ç›–åŸæ¥çš„ç»“ç‚¹ç›´å¾„ï¼ˆä¸æ‡‚ç”»å›¾ï¼‰
     dfs(c,0);
     cout<<d[c]<<endl;
     return 0;
 }*/
 
 
-//2:oj£ºÌÓÀëÃÔ¹¬
+//2:ojï¼šé€ƒç¦»è¿·å®«
 /*#include<bits/stdc++.h>
 using namespace std;
 int dx[]={0,0,-1,1};
@@ -92,7 +92,7 @@ int main()
 
 
 
-//Ê÷µÄ×î³¤Â·¾¶£¨Ê÷×´dp£©
+//æ ‘çš„æœ€é•¿è·¯å¾„ï¼ˆæ ‘çŠ¶dpï¼‰
 //3:TWO
 /*#include<bits/stdc++.h>
 using namespace std;
@@ -110,7 +110,7 @@ void add(int x,int y,int len){
 
 int dfs(int u){
     vis[u]=1;
-     int d1=0,d2=0;//Ö÷³¤£¬´Î³¤
+     int d1=0,d2=0;//ä¸»é•¿ï¼Œæ¬¡é•¿
       for(int i=head[u];i!=0;i=nxt[i]){
           int j=ver[i];
            if(vis[j]){
@@ -124,7 +124,7 @@ int dfs(int u){
                  d2=d;
              }
       }
-      ans=max(ans,d1+d2);//×¢ÒâansµÄÎ»ÖÃ£¬Òªµ±Ç°½áµã±éÀúÍêËùÓĞ×Ó½Úµãºó£¬·µ»Ø²Å¸üĞÂans
+      ans=max(ans,d1+d2);//æ³¨æ„ansçš„ä½ç½®ï¼Œè¦å½“å‰ç»“ç‚¹éå†å®Œæ‰€æœ‰å­èŠ‚ç‚¹åï¼Œè¿”å›æ‰æ›´æ–°ans
        return d1;
 }
 
@@ -147,14 +147,14 @@ int main()
 
 
 
-//4:Ê÷µÄÖØĞÄ
+//4:æ ‘çš„é‡å¿ƒ
 /*#include<bits/stdc++.h>
 using namespace std;
 const int N=1e8;
 int n;
 int ver[N],nxt[N],head[N],tot=0;
 int vis[N];
-int ans=N;//ans:Ê÷ÖØĞÄµÄ×îĞ¡×ÓÊ÷
+int ans=N;//ans:æ ‘é‡å¿ƒçš„æœ€å°å­æ ‘
 
 void add(int x,int y){
     ver[++tot]=y;
@@ -164,14 +164,14 @@ void add(int x,int y){
 
 int dfs(int u){
     vis[u]=1;
-    int size=0;//u½áµãµÄ×î´ó×ÓÊ÷
-    int sum=1;//uµÄËùÓĞ×ÓÊ÷µÄ×Ü½áµã
+    int size=0;//uç»“ç‚¹çš„æœ€å¤§å­æ ‘
+    int sum=1;//uçš„æ‰€æœ‰å­æ ‘çš„æ€»ç»“ç‚¹
      for(int i=head[u];i!=0;i=nxt[i]){
          int j=ver[i];
          if(vis[j]){
              continue;
          }
-          int s=dfs(j);//dfs·µ»ØµÄÊÇu½áµãµÄ×ÓÊ÷×ÜÊı
+          int s=dfs(j);//dfsè¿”å›çš„æ˜¯uç»“ç‚¹çš„å­æ ‘æ€»æ•°
           size=max(size,s);
           sum+=s;
      }
@@ -196,14 +196,14 @@ int main()
 
 
 //5:Anton and Tree
-//²¢²é¼¯Ëõµã£¬Ê÷µÄÖ±¾¶
+//å¹¶æŸ¥é›†ç¼©ç‚¹ï¼Œæ ‘çš„ç›´å¾„
 /*#include<bits/stdc++.h>
 using namespace std;
 const int N=2e5+9;
 int color[N];
-int fa[N];//½áµãµÄ¸¸¸ù½áµã
+int fa[N];//ç»“ç‚¹çš„çˆ¶æ ¹ç»“ç‚¹
 vector<int>G[N];
-vector<int>BG[N];//²¢²é¼¯ºóÍ¼
+vector<int>BG[N];//å¹¶æŸ¥é›†åå›¾
 queue<pair<int,int>>q;
 int ans=0;
 vector<int>vis(N,0);
@@ -212,7 +212,7 @@ int get_fa(int u){
     if(u==fa[u]){
         return u;
     }
-    return fa[u]=get_fa(fa[u]);//²éÕÒµÄÍ¬Ê±£¬Ñ¹ËõÂ·¾¶
+    return fa[u]=get_fa(fa[u]);//æŸ¥æ‰¾çš„åŒæ—¶ï¼Œå‹ç¼©è·¯å¾„
 }
 
 int dfs(int u){
@@ -231,7 +231,7 @@ int dfs(int u){
         }
     }
     ans=max(ans,d1+d2);
-    return d1;//·µ»Ø×î³¤±ß
+    return d1;//è¿”å›æœ€é•¿è¾¹
 }
 
 int main()
@@ -248,7 +248,7 @@ int main()
         cin>>x>>y;
         x= get_fa(x);
         y= get_fa(y);
-//        if(color[x]==color[y]&&x!=y){//²¢²é¼¯Ëõµã
+//        if(color[x]==color[y]&&x!=y){//å¹¶æŸ¥é›†ç¼©ç‚¹
 //            fa[y]=x;
 //        }
          if(color[x]==color[y]){
@@ -257,7 +257,7 @@ int main()
         else if(color[x]!=color[y]){
             q.push({x,y});
         }
-    }//Ëõµãºó£ººÚ°×Ïà¼äµÄµã¡£Ñ¹ËõºóµÄºÚ°×µã£¬Ñ¹ÈëÁËq¶ÓÁĞÖĞ
+    }//ç¼©ç‚¹åï¼šé»‘ç™½ç›¸é—´çš„ç‚¹ã€‚å‹ç¼©åçš„é»‘ç™½ç‚¹ï¼Œå‹å…¥äº†qé˜Ÿåˆ—ä¸­
 
       if(q.empty()){
           cout<<"0"<<endl;
@@ -280,18 +280,18 @@ int main()
 
 
 //Anton and Tree
-//¸ü¼Ó¼ò±ãµÄ£¨Ê÷µÄÖ±¾¶£©and£¨²¢²é¼¯Ëõµã£©!!!
-//²¢²é¼¯ËõµÄµã£¬Ö±½ÓÈ¨Öµ=0£¬ÇóÖ±¾¶²»¼ÆÈë¼´¿É
+//æ›´åŠ ç®€ä¾¿çš„ï¼ˆæ ‘çš„ç›´å¾„ï¼‰andï¼ˆå¹¶æŸ¥é›†ç¼©ç‚¹ï¼‰!!!
+//å¹¶æŸ¥é›†ç¼©çš„ç‚¹ï¼Œç›´æ¥æƒå€¼=0ï¼Œæ±‚ç›´å¾„ä¸è®¡å…¥å³å¯
 
 
 
-// Balancing Act£¨Ê÷µÄÖØĞÄ£©
+// Balancing Actï¼ˆæ ‘çš„é‡å¿ƒï¼‰
 /*#include<iostream>
 using namespace std;
 const int N=2e4+9;
 int ver[N],nxt[N],head[N],tot=0;
 int vis[N];
-int n,ans=N,g=N;//ans:Ê÷ÖØĞÄ¡£g£ºÖØĞÄ½áµã
+int n,ans=N,g=N;//ans:æ ‘é‡å¿ƒã€‚gï¼šé‡å¿ƒç»“ç‚¹
 
 void add(int x,int y){
     ver[++tot]=y;
@@ -301,13 +301,13 @@ void add(int x,int y){
 
 int dfs(int u){
     vis[u]=1;
-    int size=0,sum=1;//size:uµÄ×î´ó×ÓÊ÷¡£sum:uµÄ×ÓÊ÷×ÜÊı
+    int size=0,sum=1;//size:uçš„æœ€å¤§å­æ ‘ã€‚sum:uçš„å­æ ‘æ€»æ•°
     for(int i=head[u];i!=0;i=nxt[i]){
         int j=ver[i];
         if(vis[j]){
             continue;
         }
-        int s=dfs(j);//·µ»Øu½áµãÆäÖĞÒ»Ìõ×ÓÊ÷ÊıÁ¿
+        int s=dfs(j);//è¿”å›uç»“ç‚¹å…¶ä¸­ä¸€æ¡å­æ ‘æ•°é‡
         size=max(s,size);
         sum+=s;
     }
@@ -388,7 +388,7 @@ int main()
 
 
 
-//×îĞ¡Éú³ÉÊ÷(Âå¹È)£¨KruskalËã·¨£©
+//æœ€å°ç”Ÿæˆæ ‘(æ´›è°·)ï¼ˆKruskalç®—æ³•ï¼‰
 /*#include<bits/stdc++.h>
 using namespace std;
 int n,m,ans=0,cnt=0;
@@ -444,7 +444,7 @@ int main()
 }*/
 
 
-//ÂòÀñÎï£¨Âå¹È£©×îĞ¡Éú³ÉÊ÷
+//ä¹°ç¤¼ç‰©ï¼ˆæ´›è°·ï¼‰æœ€å°ç”Ÿæˆæ ‘
 /*#include<bits/stdc++.h>
 using namespace std;
 const int N=1000009;
@@ -489,7 +489,7 @@ int main()
         for(int j=1;j<=b;j++){
             int w;
             cin>>w;
-            if(i==j){ continue;}//i==j:continue¡£ i!=j&&w==0
+            if(i==j){ continue;}//i==j:continueã€‚ i!=j&&w==0
             if(i!=j&&w==0){
                 w=a;
             }
@@ -505,7 +505,7 @@ int main()
 }*/
 
 
-//²¢²é¼¯(Ä£°å)
+//å¹¶æŸ¥é›†(æ¨¡æ¿)
 /*#include<bits/stdc++.h>
 #define endl '\n'
 using namespace std;
@@ -534,11 +534,11 @@ int main()
         }
         for(int i=0;i<m;i++){
             cin>>op;
-            if(!op){//½¨±ß
+            if(!op){//å»ºè¾¹
               cin>>x>>y;
                unite(x,y);
             }
-            else{//²éÑ¯Á¬Í¨
+            else{//æŸ¥è¯¢è¿é€š
                cin>>x>>y;
                if(find(x)==find(y)){//
                    ans*=2;
@@ -560,7 +560,7 @@ int main()
 
 
 
-//²¢²é¼¯£¨Âå¹È£©
+//å¹¶æŸ¥é›†ï¼ˆæ´›è°·ï¼‰
 /*#include<bits/stdc++.h>
 using namespace std;
 const int N=2e5+9;
@@ -583,11 +583,11 @@ int main()
        }
         for(int i=1;i<=m;i++){
             cin>>op;
-             if(op==1){//ºÏ²¢
+             if(op==1){//åˆå¹¶
                cin>>x>>y;
                  unite(x,y);
              }
-             else{//ÅĞ¶Ï
+             else{//åˆ¤æ–­
                cin>>x>>y;
                 if(find(x)==find(y)){
                     cout<<"Y"<<'\n';
@@ -601,8 +601,8 @@ int main()
 }*/
 
 
-//Ç×Æİ£¨Âå¹È£©
-//²¢²é¼¯
+//äº²æˆšï¼ˆæ´›è°·ï¼‰
+//å¹¶æŸ¥é›†
 /*#include<bits/stdc++.h>
 using namespace std;
 const int N=5009;
@@ -641,7 +641,7 @@ int main()
 }*/
 
 
-//´å´åÍ¨£¨Âå¹È£©£¬²¢²é¼¯
+//æ‘æ‘é€šï¼ˆæ´›è°·ï¼‰ï¼Œå¹¶æŸ¥é›†
 /*#include<bits/stdc++.h>
 using namespace std;
 const int N=100009;
@@ -675,7 +675,7 @@ int main()
 
             for(int i=1;i<=n;i++){
                 fa[i]=i;
-            }//³õÊ¼»¯fa
+            }//åˆå§‹åŒ–fa
 
               for(int i=1;i<=m;i++){
                   int x=find(e[i].u);
@@ -683,13 +683,13 @@ int main()
                    if(x!=y){
                        fa[y]=x;
                    }
-              }//Â·¾¶Ñ¹Ëõ
+              }//è·¯å¾„å‹ç¼©
 
              for(int i=1;i<=n;i++){
                  if(i==fa[i]){
                      ans++;
                  }
-             }//¼ÆËãÑ¹ËõºóµÄ ²»Ïà¸Éµã¼¯
+             }//è®¡ç®—å‹ç¼©åçš„ ä¸ç›¸å¹²ç‚¹é›†
 
                cout<<ans-1<<endl;
          memset(e,0,sizeof(e));
@@ -699,7 +699,7 @@ int main()
 }*/
 
 
-//¿Ú´üÌì¿Õ£¨Âå¹È£¬ÉóÌâµÄÖØÒª£¡£©
+//å£è¢‹å¤©ç©ºï¼ˆæ´›è°·ï¼Œå®¡é¢˜çš„é‡è¦ï¼ï¼‰
 /*#include<bits/stdc++.h>
 using namespace std;
 const int N=1e4+9;
@@ -730,7 +730,7 @@ int main()
             e[i].u=x,e[i].v=y,e[i].w=z;
       }
          sort(e+1,e+1+m,cmp);
-         int num=n-k;//num:ÖÁÉÙ½¨±ßµÄÊıÁ¿
+         int num=n-k;//num:è‡³å°‘å»ºè¾¹çš„æ•°é‡
 
           if((num==0&&m>0)||(k>n)){
               cout<<"No Answer"<<endl;
@@ -763,7 +763,7 @@ int main()
 }*/
 
 
-//²¢²é¼¯£ºÍÅ»ï£¨Âå¹È£©
+//å¹¶æŸ¥é›†ï¼šå›¢ä¼™ï¼ˆæ´›è°·ï¼‰
 /*#include<bits/stdc++.h>
 using namespace std;
 const int N=5009;
@@ -787,7 +787,7 @@ int main()
        iota(f.begin(),f.end(),0);
         for(int i=1;i<=m;i++){
             cin>>op>>x>>y;
-             if(op=='F'){//ºÏ²¢
+             if(op=='F'){//åˆå¹¶
                 unite(x,y);
              }
              else{
