@@ -1,7 +1,7 @@
-//Á´±í£¬¶ÓÁĞ£¬µ¥µ÷Õ»£¬µ¥µ÷¶ÓÁĞ
+//é“¾è¡¨ï¼Œé˜Ÿåˆ—ï¼Œå•è°ƒæ ˆï¼Œå•è°ƒé˜Ÿåˆ—
 
-//1:µ¥ÏòÁ´±í£¨Âå¹È£©
-//Êı×éÊµÏÖµ¥ÏòÁ´±í
+//1:å•å‘é“¾è¡¨ï¼ˆæ´›è°·ï¼‰
+//æ•°ç»„å®ç°å•å‘é“¾è¡¨
 /*#include<bits/stdc++.h>
 using namespace std;
 const int N=1e6+9;
@@ -37,8 +37,8 @@ int main()
     return 0;
 }*/
 
-//2:Ë«ÏòÁ´±í
-//¶ÓÁĞ°²ÅÅ£¨Âå¹È£©
+//2:åŒå‘é“¾è¡¨
+//é˜Ÿåˆ—å®‰æ’ï¼ˆæ´›è°·ï¼‰
 /*#include<bits/stdc++.h>
 using namespace std;
 const int N=1e5+9;
@@ -59,7 +59,7 @@ int main()
      cin>>n;
       for(int i=2;i<=n;i++){
           vis[i]=1;
-          cin>>k>>p;//p0:k×ó±ß£¬p1:kÓÒ±ß
+          cin>>k>>p;//p0:kå·¦è¾¹ï¼Œp1:kå³è¾¹
           nxt=l[k].next,lst=l[k].last;
            if(p==0){
                l[lst].next=i;
@@ -78,7 +78,7 @@ int main()
        cin>>m;
         for(int i=1;i<=m;i++){
              cin>>op;
-              if(!vis[op]){//0Ã»ÓĞÕâ¸öÊı||±»É¾³ıÁË
+              if(!vis[op]){//0æ²¡æœ‰è¿™ä¸ªæ•°||è¢«åˆ é™¤äº†
                   continue;
               }
               vis[op]=0;
@@ -96,7 +96,7 @@ int main()
 
 
 
-//TLE !!! Á´±í¶ÔÓÚ¶¨Î»ÊıËùÔÚÎ»ÖÃĞèÒªO(n)£¬Õâ·Ç³£·ÑÊ±¡£Òò´ËÎÒÃÇĞèÒªÓÃ map¸¨Öú¶¨Î»
+//TLE !!! é“¾è¡¨å¯¹äºå®šä½æ•°æ‰€åœ¨ä½ç½®éœ€è¦O(n)ï¼Œè¿™éå¸¸è´¹æ—¶ã€‚å› æ­¤æˆ‘ä»¬éœ€è¦ç”¨ mapè¾…åŠ©å®šä½
 //3:Insert or Erase
 /*#include<bits/stdc++.h>
 using namespace std;
@@ -132,7 +132,7 @@ int main()
     return 0;
 }*/
 //Insert or Erase
-//mapÎ¬»¤Á´±í¶¨Î»(mapÈİÆ÷ÊµÏÖÁ´±í)
+//mapç»´æŠ¤é“¾è¡¨å®šä½(mapå®¹å™¨å®ç°é“¾è¡¨)
 /*#include<bits/stdc++.h>
 using namespace std;
 const int N=2e5+9;
@@ -144,7 +144,7 @@ int main()
     for(int i=1,temp=-1;i<=n;i++){
         cin>>a;
         last[a]=temp,nxt[temp]=a;
-        temp=a;//tempÓÃÓÚÏÂÒ»´Î
+        temp=a;//tempç”¨äºä¸‹ä¸€æ¬¡
         if(i==n){
             nxt[a]=-1;
         }
@@ -173,7 +173,7 @@ int main()
     return 0;
 }*/
 
-//Look Up S£¨Âå¹È£©µ¥µ÷Õ»
+//Look Up Sï¼ˆæ´›è°·ï¼‰å•è°ƒæ ˆ
 /*#include<bits/stdc++.h>
 using namespace std;
 const int N=1e5+9;
@@ -199,7 +199,7 @@ int main()
 }*/
 
 
-//»¬¶¯´°¿Ú£¨Âå¹È£©µ¥µ÷¶ÓÁĞ
+//æ»‘åŠ¨çª—å£ï¼ˆæ´›è°·ï¼‰å•è°ƒé˜Ÿåˆ—
 /*#include<bits/stdc++.h>
 using namespace std;
 const int N=1e6+9;
@@ -207,13 +207,13 @@ int a[N],q[N];
 int h,t,n,k;
 
 void min_q(){
-    h=1,t=0;//¿Õ¶ÓÁĞ
+    h=1,t=0;//ç©ºé˜Ÿåˆ—
      for(int i=1;i<=n;i++){
-         while(t>=h && a[i]<=a[q[t]]){//q´æµÄÊÇÏÂ±ê
+         while(t>=h && a[i]<=a[q[t]]){//qå­˜çš„æ˜¯ä¸‹æ ‡
              t--;
          }
             q[++t]=i;
-          if(i-k+1>q[h]){//Î¬»¤´°¿Ú³¤¶È
+          if(i-k+1>q[h]){//ç»´æŠ¤çª—å£é•¿åº¦
               h++;
           }
            if(i>=k){
