@@ -1,4 +1,4 @@
-//Ê÷×´Êý×é->Ïß¶ÎÊ÷
+//æ ‘çŠ¶æ•°ç»„
 /*#include<bits/stdc++.h>
 using namespace std;
 const int N=5e5+9;
@@ -28,17 +28,17 @@ int main()
      cin>>n>>m;
       for(int i=1;i<=n;i++){
           cin>>a[i];
-//           add(a[i],num);//1£ºµãÐÞ+Çø²é
+//           add(a[i],num);//1ï¼šç‚¹ä¿®+åŒºæŸ¥
       }
        int op,x,y,k;
        while(m--){
           cin>>op;
-           if(op==1){//[x,y]µÄÃ¿¸öÖµ¼ÓÉÏk
+           if(op==1){//[x,y]çš„æ¯ä¸ªå€¼åŠ ä¸Šk
                cin>>x>>y>>k;
               add(x,k);
-              add(y+1,-k);//2:ÇøÐÞ+µã²é£¨Ê÷×´Ê÷×´Î¬»¤²î·Ö£©
+              add(y+1,-k);//2:åŒºä¿®+ç‚¹æŸ¥ï¼ˆæ ‘çŠ¶æ ‘çŠ¶ç»´æŠ¤å·®åˆ†ï¼‰
            }
-           if(op==2){//Êä³öµÚx¸öÊý×Ö
+           if(op==2){//è¾“å‡ºç¬¬xä¸ªæ•°å­—
                cin>>x;
                cout<<a[x]+get_sum(x)<<endl;
               // cout<<get_sum(y)-get_sum(x-1)<<endl;
