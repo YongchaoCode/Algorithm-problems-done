@@ -1,0 +1,51 @@
+//树状数组->线段树
+/*#include<bits/stdc++.h>
+using namespace std;
+const int N=5e5+9;
+int tree[4*N],a[N];
+int n,m,num;
+
+int lowbit(int x){return x & (-x);}
+
+void add(int x,int k){
+    while(x<=n){
+        tree[x]+=k;
+        x+=lowbit(x);
+    }
+}
+
+int get_sum(int x){
+   int ans=0;
+    while(x>0){
+        ans+=tree[x];
+        x-= lowbit(x);
+    }
+    return ans;
+}
+
+int main()
+{
+     cin>>n>>m;
+      for(int i=1;i<=n;i++){
+          cin>>a[i];
+//           add(a[i],num);//1：点修+区查
+      }
+       int op,x,y,k;
+       while(m--){
+          cin>>op;
+           if(op==1){//[x,y]的每个值加上k
+               cin>>x>>y>>k;
+              add(x,k);
+              add(y+1,-k);//2:区修+点查（树状树状维护差分）
+           }
+           if(op==2){//输出第x个数字
+               cin>>x;
+               cout<<a[x]+get_sum(x)<<endl;
+              // cout<<get_sum(y)-get_sum(x-1)<<endl;
+           }
+       }
+    return 0;
+}
+*/
+
+
